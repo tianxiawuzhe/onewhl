@@ -40,7 +40,7 @@ RUN echo "Begin" \
   && speed="-i http://mirrors.aliyun.com/pypi/simple  --trusted-host mirrors.aliyun.com" \
   && pip install --no-cache-dir wheel ${speed} \
   && mkdir /whl && cd /whl \
-  && pip wheel sklearn ${speed} \
+  && pip wheel pandas==1.2.3 ${speed} \
   && echo "End"
 
 CMD ["tail", "-f", "/dev/null"]
